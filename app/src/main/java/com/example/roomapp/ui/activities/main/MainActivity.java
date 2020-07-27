@@ -1,5 +1,6 @@
 package com.example.roomapp.ui.activities.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import com.example.roomapp.R;
 import com.example.roomapp.local.AppDatabase;
 import com.example.roomapp.local.dao.NotesDao;
 import com.example.roomapp.model.entity.Note;
+import com.example.roomapp.ui.activities.addnoteactivity.AddNoteActivity;
 
 import java.util.List;
 
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void navigateToAddNoteActivity() {
+
+
+        Intent intent = new Intent(getApplicationContext(), AddNoteActivity.class);
+        startActivity(intent);
+
+
+
         //TODO create an intent for navigating from MainActivity to AddNoteActivity which you will create
         //TODO AddNoteActivity uses method of NotesDao (Insert a note method) and save to database
         //TODO after addition process, you must finish AddNoteActivity
